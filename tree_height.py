@@ -13,17 +13,17 @@ def compute_height(n, parents):
             return a[b]
         if b == -1:
             return 0
-        gar = 1 + ad(parents[b])
+        gar = 1 + h(parents[b])
         a[b] = gar
         return gar
         
  
     
     
-    max_height = -1
+    max_height = 0
     # Your code here
-    for node in range(n):
-        max_height = max(max_height, height(node))
+    for b in range(n):
+        max_height = max(max_height, height(b))
     return max_height
 
 
@@ -37,17 +37,17 @@ def main():
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
     c = input()
-    if c == "F":
-        c = input()
-        if "a" not in filename:
-            with open("./test/" + filename, c = "r") as file:
+    if "F" in c:
+        d = input()
+        if "a" not in name:
+            with open("./test/" + name, c = "r") as file:
                 n = int(file.readline())
                 parents = list(map(int, file.readline().split()))
                 
                 print(compute_height(n, parents))
                 
-    elif c == "I":
-        n = int(input())
+        if "I" in c:
+        e = int(input())
         parents = list(map(int, file.readline().split()))
         
         print(compute_height(n, parents))
