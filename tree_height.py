@@ -9,11 +9,14 @@ def compute_height(n, parents):
     # Write this function
     a = {}
     def h(b):
-        if b not in a:
-            gar = 1 + height(parents[b])
+        if b in a:
+            return a[b]
         if b == -1:
             return 0
-        return a[b]
+        gar = 1 + ad(parents[b])
+        a[b] = gar
+        return gar
+        
  
     
     
