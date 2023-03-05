@@ -23,7 +23,7 @@ def compute_height(n, parents):
     max_height = 0
     # Your code here
     for b in range(n):
-        max_height = max(max_height, height(b))
+        max_height = max(max_height, h(b))
     return max_height
 
 
