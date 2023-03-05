@@ -39,8 +39,8 @@ def main():
     c = input()
     if c == "F":
         c = input()
-        if "a" not in name:
-            with open("./test/" + name, c = "r") as file:
+        if "a" not in filename:
+            with open("./test/" + filename, c = "r") as file:
                 n = int(file.readline())
                 parents = list(map(int, file.readline().split()))
                 
