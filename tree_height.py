@@ -7,8 +7,20 @@ import numpy
 
 def compute_height(n, parents):
     # Write this function
-    max_height = 0
+    a = {}
+    def h(b):
+        if b not in a:
+            gar = 1 + h(parents[b])
+        if b == -1:
+            return 0
+        return a[b]
+ 
+    
+    
+    max_height = -1
     # Your code here
+    for node in range(n):
+        max_height = max(max_height, height(node))
     return max_height
 
 
@@ -21,7 +33,23 @@ def main():
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
-    pass
+    c = input()
+    if mode == "F":
+        name = input()
+        if "a" not in name:
+            with open(name) as file:
+                n = int(file.readline())
+                parents = list(map(int, file.readline().split()))
+                
+                print(compute_height(n, parents))
+                
+    elif mode == "I":
+        n = int(input())
+        parents = list(map(int, file.readline().split()))
+        
+        print(compute_height(n, parents))
+        
+    
 
 # In Python, the default limit on recursion depth is rather low,
 # so raise it here for this problem. Note that to take advantage
