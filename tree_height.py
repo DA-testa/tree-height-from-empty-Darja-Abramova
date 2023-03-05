@@ -36,20 +36,20 @@ def main():
     # input number of elements
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
+    
     c = input()
     if "F" in c:
         d = input()
-        if "a" not in name:
-            with open("./test/" + name, c = "r") as file:
+        if "a" not in d:
+            with open("./test/" + d, "r") as file:
                 n = int(file.readline())
-                parents = list(map(int, file.readline().split()))
+                izv = list(map(int, file.readline().split()))
                 
-                print(compute_height(n, parents))
+                print(compute_height(n, izv))
                 
-        if "I" in c:
-        e = int(input())
-        parents = list(map(int, file.readline().split()))
-        
+    if "I" in c:
+        inp = int(input())
+        ins = list(map(int, input().split()))
         print(compute_height(n, parents))
         
     
