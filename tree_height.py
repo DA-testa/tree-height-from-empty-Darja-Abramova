@@ -42,10 +42,10 @@ def main():
         d = input()
         if "a" not in d:
             with open("./test/" + d, "r") as file:
-                n = int(file.readline())
+                r = int(file.readline())
                 izv = list(map(int, file.readline().split()))
                 
-                print(compute_height(n, izv))
+                print(compute_height(r, izv))
                 
     if "I" in c:
         inp = int(input())
