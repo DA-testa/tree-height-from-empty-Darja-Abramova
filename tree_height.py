@@ -34,8 +34,8 @@ def main():
     # input values in one variable, separate with space, split these values in an array
     # call the function and output it's result
     c = input()
-    if mode == "F":
-        name = input()
+    if c == "F":
+        c = input()
         if "a" not in name:
             with open(name) as file:
                 n = int(file.readline())
@@ -43,7 +43,7 @@ def main():
                 
                 print(compute_height(n, parents))
                 
-    elif mode == "I":
+    elif c == "I":
         n = int(input())
         parents = list(map(int, file.readline().split()))
         
