@@ -50,7 +50,7 @@ def main():
     if "I" in c:
         inp = int(input())
         ins = list(map(int, input().split()))
-        print(compute_height(n, parents))
+        print(compute_height(inp, ins))
         
     
 
