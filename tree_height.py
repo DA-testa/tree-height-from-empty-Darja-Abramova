@@ -10,7 +10,7 @@ def compute_height(n, parents):
     a = {}
     def h(b):
         if b not in a:
-            gar = 1 + h(parents[b])
+            gar = 1 + height(parents[b])
         if b == -1:
             return 0
         return a[b]
@@ -37,7 +37,7 @@ def main():
     if c == "F":
         c = input()
         if "a" not in name:
-            with open(name) as file:
+            with open("./test/" + name, "r") as file:
                 n = int(file.readline())
                 parents = list(map(int, file.readline().split()))
                 
