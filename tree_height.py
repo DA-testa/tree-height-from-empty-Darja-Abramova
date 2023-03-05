@@ -2,7 +2,7 @@
 
 import sys
 import threading
-import numpy
+#import numpy
 
 
 def compute_height(n, parents):
@@ -37,7 +37,7 @@ def main():
     if c == "F":
         c = input()
         if "a" not in name:
-            with open("./test/" + name, "r") as file:
+            with open("./test/" + name, c = "r") as file:
                 n = int(file.readline())
                 parents = list(map(int, file.readline().split()))
                 
